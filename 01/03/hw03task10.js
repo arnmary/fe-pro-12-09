@@ -5,11 +5,5 @@
 
 
 for (let i = 10; i >0; i--) {
-    console.log(`Hello ${i}`);
-    if (i>0) {
-        continue;
-    }
-    console.log(`Break vaalue${i}`);
-    
-    
+    console.log(`Hello ${i}`);   
 }

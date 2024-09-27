@@ -5,16 +5,16 @@
 
 let numberValue = prompt('Hello, type your number')
 
-let chackValue = numberValue%2;
-// console.log(chackValue);
+let checkValue = numberValue;
 
 
 
-if (chackValue > 0 ) {
-    console.log('Your number is not even'); 
+
+if ( numberValue%2 ==0 ) {
+    console.log(`${checkValue} is even`); 
 }
 else {
 
-    console.log('Your number is even');
+    console.log(`${checkValue} is not even`);
     
  }
