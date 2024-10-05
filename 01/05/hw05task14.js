@@ -13,10 +13,27 @@ let users = [
  { name: 'Марія', age: 30 },
 ];
 
-users.sort((a,b)=>a.age-b.age);
-console.log(users);
+// users.sort((a,b)=>a.age-b.age);
+// console.log(users);
 
-users.shift();
-console.log(users);
+// users.shift();
+// console.log(users);
 
+ function filterAndSortUsers(usersArr) {
+    let filtretUsers =[];
+    for (let i = 0; i < usersArr.length; i++) {
+        if (usersArr[i].age>18) {
+            filtretUsers.push(usersArr[i]);
+        }
+        
+    }
+    console.log(filtretUsers);
+    filtretUsers.sort((a,b)=>a.age-b.age);
+    console.log(filtretUsers);
+    filtretUsers.shift();
+    return filtretUsers
+ } 
+ 
+console.log(filterAndSortUsers(users));
 
+;
