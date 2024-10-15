@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button.test{
+            background-color: orange;
+            display: inline-block;
+            padding: 20px;
+            color: black;
+            font-size: 20px;
+        }
+        button.test::before{
+            content:'Open menu' ;
+        }
+        button.open{
+            background-color: green;
+            color:white;
+        }
+        button.open::after{
+            content: 'close menu';
+        }
+        ul{
+            display: none;
+        }
+        ul.active{
+        display: block;
+        background-color: blueviolet;
+        color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Hello js style
+    </h1>
+   <!-- <br> -->
+    <h2>
+        Hello class methods
+    </h2>
+    <!-- <br> -->
+<header>
+    <nav></nav>
+</header>
+<a href="#" target="_blank">Visit site</a>
+<a href="" class="emty">No content</a>
+<button>
+    Cal me
+</button>
+<div class="container">
+    <button class="open test">
+     
+    </button>
+<ul class="active">
+    <li>Hello</li>
+    <li class="active">Aktive</li>
+    <li>World</li>
+</ul>
+</div>
+
+
+
+    <script src="./page09.js"></script>
+</body>
+</html>
