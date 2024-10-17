@@ -40,23 +40,38 @@ url.setAttribute('target','blank')
 
 // 4.4)Створіть блок за допомогою js задайте блоку стиль display flex та в середині цього блоку створіть 50 div блоків з правилом border-radius, width 50px height 50px та background-color
 
-let sectionEl = document.createElement('section');
+
+function getRandomColor() {
+    const r = Math.floor(Math.random()*256);
+    const g = Math.floor(Math.random()*256);
+    const b = Math.floor(Math.random()*256);
+    return `rgb(${r}, ${g}, ${b})`;
+    
+}
+
+function createDivs() {
+    let sectionEl = document.createElement('section');
 mainEl.appendChild(sectionEl);
 sectionEl.style.display='flex';
-
-
-
+sectionEl.style.flexWrap ='wrap';
+sectionEl.style.width ='900px';
+sectionEl.style.margin ='0 auto';
+sectionEl.style.gap ='20px';
 for (let index = 0; index < 50 ;index++) {
     const multDiv = document.createElement('div');
     sectionEl.appendChild(multDiv);
     multDiv.style.borderRadius= '50px';
 multDiv.style.width ='50px';
 multDiv.style.height='50px';
-multDiv.style.backgroundColor ='green'
-multDiv.classList.add('circle-elemt')
+// multDiv.style.backgroundColor ='green'
+multDiv.classList.add('circle-elemt');
+multDiv.style.backgroundColor =getRandomColor();
+
 }
 
+}
 
+createDivs();
 // 4.5) доадайте всім стврореним 50 div елементам класс circle-elemt
 
 
