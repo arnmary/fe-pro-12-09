@@ -35,9 +35,31 @@ changeSizeEl.ondblclick = function () {
   
 } 
 
-let imageEl =document.querySelector('.image');
+let imageEl = document.querySelector('.image');
+// imageEl.ondblclick = function () {
+//     imageEl.style.width ='30%';
+//     imageEl.style.height = '30%';
+// }
+
+// console.log(imageEl);
 imageEl.ondblclick = function () {
-    imageEl.style.width ='30%';
-    imageEl.style.height = '30%';
+//     let currentWidth = imageEl.clientWidth;
+//     let currentHeight = imageEl.clientHeight;
+//     console.log(`Current w and h client ${currentWidth} and ${currentHeight}`);
+//     imageEl.style.width = `${(currentWidth * 2)}px`;
+//     imageEl.style.height = `${(currentHeight * 2)}px`;
+
+    const computedStyle = getComputedStyle(imageEl);
+    console.log(computedStyle);
+    let currentWidth = parseFloat(computedStyle.width);
+    let currentHeight =parseFloat(computedStyle.height);
+    
+        imageEl.style.width = `${(currentWidth * 2)}px`;
+    imageEl.style.height = `${(currentHeight * 2)}px`;
+
+    
+    
 }
+
+
 

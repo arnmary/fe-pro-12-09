@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hw11</title>
+
+    <style>
+        .mouse{
+            width: 200px;
+            height: 200px;
+            padding: 50px;
+            background-color: rgb(111, 45, 58);
+            margin: 0 auto;
+        }
+        .textBlock{
+      position: relative;
+      background-color: aqua;
+      padding: 50px;
+    
+        }
+
+        .customMenu{
+            display: none;
+            padding: 0;
+            position: absolute;
+            background-color: lightblue;
+            border: 2px solid black;
+        }
+         .customMenu li{
+            list-style: none;
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+        .customMenu li:hover{
+            background-color: white;
+        }
+        .container{
+            padding: 15px 0;
+            position: relative;
+        }
+        .playFolder{
+            width: 500px;
+            height:500px;
+          position: relative;
+            background-color: blue;
+            border: 2px solid black;
+        }
+        .element{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50px;
+            background-color: orange;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="mouse">
+        Hello!
+    </div>
+    <div class="container">
+       <div class="textBlock">
+             Клікніть правою кнопкою миші
+              </div> 
+              <ul class="customMenu">
+            <li class="center">Bирівняти по центру</li>
+            <li class="right">Bирівняти по правому краю</li>
+            <li class="left">Bирівняти по лівому краю</li>
+            <li class="none">Приховати елемент</li>
+        </ul> 
+    </div>
+    
+       
+      
+   
+    <div class="playFolder">
+
+        <div class="element"></div>
+        <div class="secondElement"></div>
+    </div>
+
+    <script src="./hw11task1.js"></script>
+</body>
+</html>

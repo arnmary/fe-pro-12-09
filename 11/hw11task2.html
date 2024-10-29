@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hw11task2</title>
+
+    <style>
+.convertBlock{
+    display: block;
+    width: 800px;
+    height: 300px;
+    padding: 50px;
+    background-color: rgb(112, 85, 112);
+    color: black;
+    border-radius: 10px;
+
+}
+.calculator{
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    }
+.resultBlock{
+    text-align: center;
+    padding: 30px;
+}
+button{
+    width: 250px;
+    height: 100px;
+    border-radius: 20px;
+}
+.resultBlock{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   padding: 20px;
+  
+}
+.clearCourse{
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+    padding: 5px;
+}
+    </style>
+</head>
+<body>
+    <div class="convertBlock">
+        <form action="">
+            <div class="calculator">
+                    <label for="setAmo">Введіть суму</label>
+                    <input type="number" name="setAmo" id="amount">
+                
+                
+                    <label for="setCour">Bведіть курс</label>
+                    <input type="number" name="setCour" id="course">
+            
+            </div>
+            <div class="resultBlock">
+                <button class=" getResult">
+                   </button> 
+                   <button class="clearCourse">
+                    Очистіть форму
+                       </button>
+            
+                
+            </div>
+        </form>
+    </div>
+
+
+    <script src="./hw11task2.js"></script>
+</body>
+</html>
