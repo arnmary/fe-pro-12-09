@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hw12</title>
+    <style>
+
+        .formWrap{
+            width: 100%;
+            height: 100%;
+        }
+.countries{
+    position: relative;
+    width: 100%;
+    background-color: rgb(16, 145, 145);
+    padding: 50px;
+}
+.countryList{
+    width: 300px;
+    position: absolute;
+    background-color: rgb(16, 145, 145) ;
+    list-style-type: none;
+    display: none;
+}
+.countryList li{
+    cursor: pointer;
+    padding: 5px 10px;
+}
+.countryList li:hover{
+    background-color: rgb(170, 240, 240)  ;
+}
+        .cardInfo{
+            width: 250px;
+            background-color: rgb(170, 240, 240);
+            padding: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="formWrap">
+        <h3>
+    Оберіть фон
+</h3>
+<form action="">
+    <label for="red">
+        <input type="radio" name="changeBg" id="red">
+Червоний
+    </label>
+    <label for="yellow">
+        <input type="radio" name="changeBg" id="yellow">
+Жовтий
+    </label>
+    <label for="blue">
+        <input type="radio" name="changeBg" id="blue">
+Синій
+    </label>
+    <label for="green">
+        <input type="radio" name="changeBg" id="green">
+Зелений
+    </label>
+</form>
+    </div>
+    <div class="countries">
+        <h3>Клікніть правою кнопкою для вибору країни</h3>
+        <form action="" class="countryList">
+<label for="#uk">
+    <input type="radio" name="country" id="uk">
+    Україна
+</label>
+<label for="#pl">
+    <input type="radio" name="country" id="pl">
+    Польща
+</label>
+<label for="#uk">
+    <input type="radio"  name="country" id="cr">
+    Хорватія
+</label>
+        </form>
+        <!-- <ul class="countryList">
+            <li class="uk">Україна</li>
+            <li class="pl">Польща</li>
+            <li class="cr">Хорватія</li>
+        </ul> -->
+        <div class="cardInfo ukInfo ">
+     <h3>Україна</h3>
+     <p>Столиця - Київ</p>
+     <p>Площа - 603 700 км²</p>
+     <p>Населення - 41 167 335 чол.</p>
+        </div>
+        <div class=" cardInfo plInfo">
+<h3>Польща</h3>
+<p>Столиця - Варшава</p>
+<p>Площа - 312 685 км²</p>
+<p>Населення -  37 766 327 чол.</p>
+        </div>
+        <div class="cardInfo crInfo">
+            <h3>Хорватія</h3>
+<p>Столиця - Загреб</p>
+<p>Площа - 56 594 км²</p>
+<p>Населення - 4 291 000 чол.</p>
+        </div>
+    </div>
+<div >
+    <button class="counter">
+       почати відлік 
+    </button>
+    <h1>
+        Count: 0
+    </h1>
+</div>
+
+
+    <script src="./hw12task1.js"></script>
+</body>
+</html>
