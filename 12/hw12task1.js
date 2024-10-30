@@ -77,19 +77,19 @@ let titleEl =document.querySelector('h1');
 
     function countFn () {
      count ++
-     titleEl.innerHTML =`Count : ${count}`  
+     titleEl.innerHTML =`Count : ${count}` 
+      
    if (count>10) {
+  clearInterval(intervalCounter);
 
-//   clearInterval(intervalCounter);
     alert('Stop')
  }
     };
-countFn();
-  
+
+   let intervalCounter
 buttonEl.addEventListener('click',function () {
 
- let intervalCounter = setInterval(countFn, 1000);
- 
+intervalCounter = setInterval(countFn, 1000);
 
 });
 
