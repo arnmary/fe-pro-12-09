@@ -17,17 +17,20 @@ mouseEl.addEventListener('mouseout', function (e) {
 let textEl = document.querySelector('.textBlock');
 let menuEl = document.querySelector('.customMenu');
 let liCenterEl = document.querySelector('.center');
+
 let liLeftEl = document.querySelector('.left');
 let liREl = document.querySelector('.right');
-console.log(liREl);
 let liNoneEl = document.querySelector('.none');
-console.log(liNoneEl);
+
 
 textEl.addEventListener('contextmenu', function (e) {
     e.preventDefault();
-    menuEl.style.top = `${e.clientY}px`;
-    menuEl.style.left = `${e.clientX}px`;
+    menuEl.style.top = `${e.offsetY}px`;
+    menuEl.style.left = `${e.offsetX}px`;
+ 
+  
     menuEl.style.display ='block'
+
 
 });
 liCenterEl.addEventListener('click', function () {
@@ -39,7 +42,6 @@ liLeftEl.addEventListener('click', function () {
 liREl.addEventListener('click', function () {
     textEl.style.textAlign = 'right';
 })
-
 
 liNoneEl.addEventListener('click', function () {
     menuEl.style.display ='none'
@@ -65,10 +67,10 @@ document.addEventListener('keydown', function (e) {
             posY = Math.min(playFolder.clientHeight - gameEl.clientHeight, posY + moveStep);
             break;
         case 'ArrowRight':
-            posX = Math.max(0, posX - moveStep);
+            posX = Math.min(playFolder.clientWidth - gameEl.clientWidth, posX + moveStep);
             break;
         case 'ArrowLeft':
-            posX = Math.min(playFolder.clientWidth - gameEl.clientWidth, posX + moveStep);
+            posX = Math.max(0, posX - moveStep);
             break;
 
     }
