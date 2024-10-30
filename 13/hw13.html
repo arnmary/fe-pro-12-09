@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        height: 150px;
+        padding: 10px;
+        background-color: rgb(69, 39, 96);
+    }
+    .textBlock{
+        width: 500px;
+        height: 100px;
+        padding:20px ;
+        background-color: rgb(161, 117, 161);
+    }
+    p{
+        width: 350px;
+        padding: 10px;
+    }
+
+</style>
+<body>
+    <div class="textBlock">
+       <form action="">
+        <label for="text">
+            <input type="text" id="text">
+            Введіть своє питання
+        </label>
+        <button class="saveButton">
+            Зберегти в Storage
+        </button>
+        <button class="showText">
+            Показати введені данні
+        </button>
+       </form>
+       <p class="textInfo"></p>
+    </div>
+
+
+<div class="container">
+     <form action="">
+        <label for="email">
+            <input type="email" name="userEmail" id="email">
+            email
+        </label>
+        <button class="sendEmail">send email</button>
+        <p class="message"></p>
+         </form>
+         <form action="">
+    <label for="password">
+            <input type="password" name="userPassword" id="password">
+            password
+        </label>
+        <button class="sendPass">send password</button>
+    <p class="info"></p>
+         </form>
+    
+</div>
+   
+    
+    <script src="./hw13.js"></script>
+</body>
+</html>
