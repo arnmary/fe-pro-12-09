@@ -1,0 +1,9 @@
+{
+    "userName":"Tom",
+    "userAge":33,
+    "study":true,
+    "friends":["john","Sara"],
+    "Company":{
+        "CompanyName":"Microsoft"
+    }
+}
