@@ -32,12 +32,14 @@ console.log(worldTest);
 
 // 4 Створіть веб-сторінку з текстовим полем і кнопкою. При натисканні на кнопку, збережіть введення користувача у sessionStorage. Додайте ще одну кнопку, яка при натисканні відображатиме збережені дані у веб-сторінці.
 
-document.querySelector('.saveButton').addEventListener('click',function() {
+document.querySelector('.saveButton').addEventListener('click',function(e){
+    e.preventDefault();
     let inputEl =document.querySelector('#text').value;
 
       window.sessionStorage.setItem('inputEl',inputEl);
 })
-document.querySelector('.showText').addEventListener('click',function () {
+document.querySelector('.showText').addEventListener('click',function (e){
+    e.preventDefault();
  let textSession = window.sessionStorage.getItem('inputEl');
 
  let infoP = document.querySelector('.textInfo') ;
@@ -70,7 +72,7 @@ if (testEmal) {
 }
 else{
 
-showMessage.innerText = 'Your email invalid'
+showMessage.innerText = 'Email повинен містити великі та маленькі латинські букви, а також . та @'
      emailBt. disabled= true;
 }
 }
@@ -96,10 +98,13 @@ if (testPass) {
 }
 else{
 
-    infoP.innerText ='Your password invalid'
+    infoP.innerText ='Ваш пароль не валідний. Пароль повинен містити великі та маленькі латинські букви та цифри.'
      passBt.disabled =true;
 }
 }
 
 passBt.addEventListener('click',verifyPass);
 
+document.querySelector('.conteiner').addEventListener('click',function(e){
+    e.preventDefault();
+})
